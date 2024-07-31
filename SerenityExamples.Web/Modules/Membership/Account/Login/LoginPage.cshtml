@@ -1,0 +1,18 @@
+@model SerenityExamples.Membership.LoginPageModel
+@inject ITextLocalizer Localizer
+@{
+    ViewData["Title"] = Texts.Forms.Membership.Login.LoginToYourAccount.ToString(Localizer);
+    ViewData["PageId"] = "Login";
+    Layout = MVC.Views.Shared._LayoutNoNavigation;
+}
+<partial name="@MVC.Views.Membership.Account.Login._ActivationComplete" />
+
+<div class="s-full-page justify-content-center">
+    <div id="LoginPanel" class="s-container-tight s-vertical-form"></div>
+    <partial name="@MVC.Views.Membership.Account.Login._StoreLinks" model=Model />
+</div>
+
+<script type="module">
+    import pageInit from '@Html.ResolveWithHash(ESM.Modules.Membership.Account.Login.LoginPage)';
+    pageInit(@Json.Serialize(Model));
+</script>

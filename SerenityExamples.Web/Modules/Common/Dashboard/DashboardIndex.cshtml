@@ -1,0 +1,32 @@
+@model SerenityExamples.Common.DashboardPageModel
+@inject ITextLocalizer Localizer
+@{
+    ViewData["Title"] = "Dashboard";
+    ViewData["PageId"] = "Dashboard";
+#if (Northwind)
+    string nwLinkFormat = "~/Northwind/{0}";
+#else  
+    string nwLinkFormat = "javascript:;";
+#endif
+}
+
+@section Head {
+@Html.StyleBundle("Pages/Dashboard")
+}
+
+@section ContentHeader {
+<h1>@Localizer.Get("Navigation.Dashboard")</h1>
+}
+
+<div id="DashboardContent">
+</div>
+
+<script type="module">
+    import pageInit from '@Html.ResolveWithHash(ESM.Modules.Common.Dashboard.DashboardPage)';
+
+    pageInit(@Json.Serialize(new
+    {
+        model = Model,
+        nwLinkFormat
+    }));
+</script>

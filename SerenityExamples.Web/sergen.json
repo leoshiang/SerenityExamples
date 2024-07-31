@@ -1,0 +1,9 @@
+{
+  "Extends": "defaults@6.6.0",
+  "EnableGenerateFields": true,
+  "RootNamespace": "SerenityExamples",
+  "UpgradeInfo": {
+    "InitialType": "Premium",
+    "InitialVersion": "8.6.0.0"
+  }
+}
