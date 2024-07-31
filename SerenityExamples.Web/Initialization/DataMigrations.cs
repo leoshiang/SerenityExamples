@@ -25,20 +25,8 @@ public class DataMigrations(ITypeSource typeSource,
     {
         foreach (var databaseKey in databaseKeys)
         {
-            EnsureDatabase(databaseKey);
             RunMigrations(databaseKey);
         }
-    }
-
-    /// <summary>
-    /// Automatically creates a database for the template if it doesn't already exists.
-    /// You might delete this method to disable auto create functionality.
-    /// </summary>
-    private void EnsureDatabase(string databaseKey)
-    {
-        MigrationUtils.EnsureDatabase(databaseKey,
-            hostEnvironment.ContentRootPath, sqlConnections);
-        Microsoft.Data.SqlClient.SqlConnection.ClearAllPools();
     }
 
     private void RunMigrations(string databaseKey)

@@ -23,6 +23,7 @@
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.5.3" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
     <PackageReference Include="Serenity.Assets" Version="8.6.0" />
     <PackageReference Include="Serenity.Corelib" Version="8.6.0" />
     <PackageReference Include="Serenity.Net.Web" Version="8.6.0" />

@@ -209,6 +209,6 @@ public partial class Startup
         // DbProviderFactories.RegisterFactory("MySql.Data.MySqlClient", MySql.Data.MySqlClient.MySqlClientFactory.Instance);
 
         // to enable POSTGRES: add Npgsql reference, set connections, and uncomment line below
-        // DbProviderFactories.RegisterFactory("Npgsql", Npgsql.NpgsqlFactory.Instance);
+        DbProviderFactories.RegisterFactory("Npgsql", Npgsql.NpgsqlFactory.Instance);
     }
 }
