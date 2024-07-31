@@ -68,6 +68,28 @@ namespace SerenityExamples.Texts {
                 export const Username: string;
             }
         }
+
+        namespace Tables {
+
+            namespace OrderLines {
+                export const FakeId: string;
+                export const ItemNumber: string;
+                export const OrderNumber: string;
+                export const Price: string;
+                export const ProductNumber: string;
+                export const Qty: string;
+                export const Total: string;
+            }
+
+            namespace Orders {
+                export const CustomerNumber: string;
+                export const Lines: string;
+                export const OrderDate: string;
+                export const OrderNumber: string;
+                export const SalesNumber: string;
+                export const Total: string;
+            }
+        }
     }
 
     export declare namespace Forms {
@@ -176,6 +198,10 @@ namespace SerenityExamples.Texts {
                 User: {},
                 UserPermission: {},
                 UserRole: {}
+            },
+            Tables: {
+                OrderLines: {},
+                Orders: {}
             }
         },
         Forms: {
